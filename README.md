@@ -217,4 +217,87 @@ print(numpy.mean(data, axis = 1))
 
 
 
+## Analyzing Patient Data 3
+
+In this analysis, we visualized the data
+```python
+import numpy
+data = numpy.loadtxt(fname = 'inflammation-01.csv', delimiter = ',')
+```
+
+
+```python
+# Heat map of patient inflammation over time
+import matplotlib.pyplot
+image = matplotlib.pyplot.imshow(data)
+matplotlib.pyplot.show()
+```
+
+
+<img width="178" height="251" alt="image" src="https://github.com/user-attachments/assets/55172e84-7916-4ddf-b75f-d7743193c45e" />
+
+
+
+
+```python
+# Average inflammation over time
+
+ave_inflammation = numpy.mean(data, axis = 0)
+ave_plot = matplotlib.pyplot.plot(ave_inflammation)
+matplotlib.pyplot.show()
+```
+
+
+<img width="308" height="201" alt="image" src="https://github.com/user-attachments/assets/905df8be-ff3d-403b-88b0-8be8532e73ab" />
+
+
+
+
+```python
+max_plot = matplotlib.pyplot.plot(numpy.amax(data, axis = 0))
+matplotlib.pyplot.show()
+```
+
+
+<img width="308" height="200" alt="image" src="https://github.com/user-attachments/assets/dcb085c9-dece-489f-90f7-a7c71b32eeb0" />
+
+
+
+```python
+min_plot = matplotlib.pyplot.plot(numpy.amin(data,axis = 0))
+matplotlib.pyplot.show()
+```
+
+
+<img width="362" height="248" alt="image" src="https://github.com/user-attachments/assets/7f7b146a-f5c0-4477-9607-93c19254da52" />
+
+
+
+```python
+fig = matplotlib.pyplot.figure(figsize =(10.0,3.0))
+
+axes1 = fig.add_subplot(1, 3, 1)
+axes2 = fig.add_subplot(1, 3, 2)
+axes3 = fig.add_subplot(1, 3, 3)
+
+axes1.set_ylabel('average')
+axes1.plot(numpy.mean(data, axis = 0))
+
+axes2.set_ylabel('max')
+axes2.plot(numpy.amax(data, axis = 0))
+
+axes3.set_ylabel('min')
+axes3.plot(numpy.amin(data, axis = 0))
+
+fig.tight_layout()
+
+matplotlib.pyplot.savefig('inflammation.png')
+matplotlib.pyplot.show()
+```
+
+
+<img width="712" height="208" alt="image" src="https://github.com/user-attachments/assets/55b041c2-8ec3-4821-bfad-bd551c797904" />
+
+
+
 
