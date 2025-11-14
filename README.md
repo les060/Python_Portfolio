@@ -1438,7 +1438,7 @@ print( 'total is:', total)
 
     AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-3-d5cddad0f3bd> in <module>
+    <ipython-input-1-d5cddad0f3bd> in <module>
           2 total = 0.0
           3 for num in numbers:
     ----> 4     assert num > 0.0,'Data should only contain positive valuse'
@@ -1484,11 +1484,11 @@ print(normalize_rectangle( (0.0, 1.0, 2.0) ))
 
     AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-10-f9d109085db1> in <module>
+    <ipython-input-3-f9d109085db1> in <module>
     ----> 1 print(normalize_rectangle( (0.0, 1.0, 2.0) ))
     
 
-    <ipython-input-9-a79443025659> in normalize_rectangle(rect)
+    <ipython-input-2-8452a6a06c08> in normalize_rectangle(rect)
           2     """Normalizes a rectangle so that it is at the origin and 1.0 units long on its logest axis. input should be of the format (x0, yo, x1, y1).
           3     (x0, y0) and (x1, yl) define the lower left and upper right corners of the rectangle respectively.""" 
     ----> 4     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
@@ -1509,11 +1509,11 @@ print(normalize_rectangle( (4.0, 2.0, 1.0, 5.0) ))
 
     AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-11-f7e0d48bdfd0> in <module>
+    <ipython-input-4-f7e0d48bdfd0> in <module>
     ----> 1 print(normalize_rectangle( (4.0, 2.0, 1.0, 5.0) ))
     
 
-    <ipython-input-9-a79443025659> in normalize_rectangle(rect)
+    <ipython-input-2-8452a6a06c08> in normalize_rectangle(rect)
           4     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
           5     x0, y0, x1, y1 = rect
     ----> 6     assert x0 < x1, 'Invalid X coordinates'
@@ -1537,24 +1537,10 @@ print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0)))
 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    AssertionError                            Traceback (most recent call last)
-
-    <ipython-input-13-83721d2716e7> in <module>
-    ----> 1 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
-    
-
-    <ipython-input-9-a79443025659> in normalize_rectangle(rect)
-         16             upper_x, upper_y = scaled, 1.0
-         17     assert 0 < upper_x <= 1.0, 'Calculated upper x coordinate invalid'
-    ---> 18     assert 0 < upper_y <= 1.0, 'Calculated upper y coordinate invalid'
-         19 
-         20     return(0, 0, upper_x, upper_y)
+    (0, 0, 1.0, 0.2)
 
 
-    AssertionError: Calculated upper y coordinate invalid
+
 
 
 
