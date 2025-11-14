@@ -488,7 +488,7 @@ fig.tight_layout()
 ```
 
 
-![png](output_18_0.png)
+<img width="990" height="280" alt="image" src="https://github.com/user-attachments/assets/9c02a566-2a32-44a9-ba5a-7633778e3152" />
 
 
 
